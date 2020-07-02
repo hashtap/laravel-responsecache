@@ -13,13 +13,27 @@ use Symfony\Component\HttpFoundation\Response;
 
 class CacheResponse
 {
-    protected ResponseCache $responseCache;
+	/**
+	 * @var ResponseCache
+	 */
+    protected $responseCache;
 
+	/**
+	 * CacheResponse constructor.
+	 *
+	 * @param ResponseCache $responseCache
+	 */
     public function __construct(ResponseCache $responseCache)
     {
         $this->responseCache = $responseCache;
     }
 
+	/**
+	 * @param Request $request
+	 * @param Closure $next
+	 * @param mixed ...$args
+	 * @return Response
+	 */
     public function handle(Request $request, Closure $next, ...$args): Response
     {
         $lifetimeInSeconds = $this->getLifetime($args);

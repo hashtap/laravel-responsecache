@@ -1,26 +1,15 @@
 # Speed up an app by caching the entire response
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-responsecache.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-responsecache)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/hashtap/laravel-responsecache.svg?style=flat-square)](https://packagist.org/packages/hashtap/laravel-responsecache)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Quality Score](https://img.shields.io/scrutinizer/g/spatie/laravel-responsecache.svg?style=flat-square)](https://scrutinizer-ci.com/g/spatie/laravel-responsecache)
-![Psalm](https://github.com/spatie/laravel-responsecache/workflows/psalm/badge.svg)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-responsecache.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-responsecache)
+![Psalm](https://github.com/hashtap/laravel-responsecache/workflows/psalm/badge.svg)
+[![Total Downloads](https://img.shields.io/packagist/dt/hashtap/laravel-responsecache.svg?style=flat-square)](https://packagist.org/packages/hashtap/laravel-responsecache)
 
 This Laravel package can cache an entire response. By default it will cache all successful get-requests that return text based content (such as html and json) for a week. This could potentially speed up the response quite considerably.
 
 So the first time a request comes in the package will save the response before sending it to the users. When the same request comes in again we're not going through the entire application but just respond with the saved response.
 
 Are you a visual learner? Then watch [this video](https://spatie.be/videos/spatie-package-source-dives/laravel-responsecache) that covers how you can use laravel-responsecache and how it works under the hood.
-
-## Support us
-
-Learn how to create a package like this one, by watching our premium video course:
-
-[![Laravel Package training](https://spatie.be/github/package-training.jpg)](https://laravelpackage.training)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
 ## Installation
 
