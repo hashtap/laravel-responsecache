@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class CsrfTokenReplacer implements Replacer
 {
-    protected string $replacementString = '<laravel-responsecache-csrf-token-here>';
+    protected $replacementString = '<laravel-responsecache-csrf-token-here>';
 
     public function prepareResponseToCache(Response $response): void
     {

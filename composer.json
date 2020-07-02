@@ -1,5 +1,5 @@
 {
-    "name": "spatie/laravel-responsecache",
+    "name": "hashtap/laravel-responsecache",
     "description": "Speed up a Laravel application by caching the entire response",
     "keywords": [
         "spatie",
@@ -9,7 +9,7 @@
         "response",
         "performance"
     ],
-    "homepage": "https://github.com/spatie/laravel-responsecache",
+    "homepage": "https://github.com/hashtap/laravel-responsecache",
     "license": "MIT",
     "authors": [
         {
@@ -20,8 +20,8 @@
         }
     ],
     "require": {
-        "php": "^7.4",
-        "laravel/framework": "^7.13",
+        "php": "^7.2",
+        "laravel/framework": "^7.0",
         "nesbot/carbon": "^2.35"
     },
     "require-dev": {

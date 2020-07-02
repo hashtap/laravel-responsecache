@@ -9,12 +9,28 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ResponseCache
 {
-    protected ResponseCacheRepository $cache;
+	/**
+	 * @var ResponseCacheRepository
+	 */
+    protected $cache;
 
-    protected RequestHasher $hasher;
+	/**
+	 * @var RequestHasher
+	 */
+    protected $hasher;
 
-    protected CacheProfile $cacheProfile;
+	/**
+	 * @var CacheProfile
+	 */
+    protected $cacheProfile;
 
+	/**
+	 * ResponseCache constructor.
+	 *
+	 * @param ResponseCacheRepository $cache
+	 * @param RequestHasher $hasher
+	 * @param CacheProfile $cacheProfile
+	 */
     public function __construct(ResponseCacheRepository $cache, RequestHasher $hasher, CacheProfile $cacheProfile)
     {
         $this->cache = $cache;
@@ -53,7 +69,7 @@ class ResponseCache
         $this->taggedCache($tags)->put(
             $this->hasher->getHashFor($request),
             $response,
-            $lifetimeInSeconds ?? $this->cacheProfile->cacheRequestUntil($request),
+            $lifetimeInSeconds ?? $this->cacheProfile->cacheRequestUntil($request)
         );
 
         return $response;
@@ -80,10 +96,7 @@ class ResponseCache
     {
         $clonedResponse = clone $response;
 
-        $clonedResponse->headers->set(
-            config('responsecache.cache_time_header_name'),
-            now()->toRfc2822String(),
-        );
+        $clonedResponse->headers->set(config('responsecache.cache_time_header_name'), now()->toRfc2822String());
 
         return $clonedResponse;
     }

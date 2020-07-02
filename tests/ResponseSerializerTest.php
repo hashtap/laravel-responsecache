@@ -11,11 +11,11 @@ use Spatie\ResponseCache\Test\Serializers\TestSerializer;
 
 class ResponseSerializerTest extends TestCase
 {
-    protected string $textContent;
+    protected $textContent;
 
-    protected string $jsonContent;
+    protected $jsonContent;
 
-    protected string $statusCode;
+    protected $statusCode;
 
     public function setUp(): void
     {
